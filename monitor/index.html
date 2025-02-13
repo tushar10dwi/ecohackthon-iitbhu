@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Monitoring</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <h1>Electricity Consumption Monitor</h1>
+    <form id="energy-form">
+        <label for="appliance">Appliance Name:</label>
+        <input type="text" id="appliance" placeholder="e.g., Washing Machine" required>
+
+        <label for="power">Power (Watts):</label>
+        <input type="number" id="power" placeholder="e.g., 500" required>
+
+        <label for="hours">Hours Used Per Day:</label>
+        <input type="number" id="hours" placeholder="e.g., 2" required>
+
+        <button type="button" onclick="addAppliance()">Track</button>
+    </form>
+
+    <div id="results" style="margin-top: 20px;">
+        <h2>Results</h2>
+        <p><strong>Total Energy:</strong> <span id="energy-output">0 kWh</span></p>
+    </div>
+
+    <div id="appliance-data">
+        <h2>Appliance List</h2>
+        <table border="1" id="user-data">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Appliance</th>
+                    <th>Power (W)</th>
+                    <th>Hours</th>
+                    <th>Energy (kWh)</th>
+                </tr>
+            </thead>
+            <tbody id="appliance-list">
+                <!-- Appliance data will be displayed here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="chart-container" style="margin-top: 20px;">
+        <h2>Energy Consumption Chart</h2>
+        <canvas id="energyChart" width="400" height="200"></canvas>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    font-family: "Lexend Giga",serif;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./background.jpeg);
+    letter-spacing: -1px;
+}
+form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+}
+form label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+form button {
+    background-color: #8f61d8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Lexend Giga", serif;
+}
+form button:hover {
+    background-color: #51377b;
+}
+
+table {
+    margin-left: 360px;
+}
